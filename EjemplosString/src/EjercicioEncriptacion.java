@@ -1,12 +1,13 @@
+import java.util.Arrays;
 import java.util.Iterator;
 
 public class EjercicioEncriptacion {
 
 	public static void main(String[] args) {
-		ejercicioEncriptar();
+//		ejercicioEncriptar();
 //		ejercicioFrases();
 //		cuentaLetras();
-//		pruebaCadena();
+		pruebaCadena();
 
 
 	}
@@ -129,10 +130,22 @@ public class EjercicioEncriptacion {
 	 * @param cadena es la cadena que se le pasa como parámetro
 	 * @return devuelve la cadena invertida
 	 */
+//	public static String cadenaInvertida(String cadena) {
+//		StringBuilder stringBuilder = new StringBuilder(cadena);//declaro un StringBuilder que es una clase que me permite almacenar cadenas de caracteres mediante la creacion de un objeto y me permite mutar los caracteres de la cadena de texto
+//		String invertida = stringBuilder.reverse().toString();//declaro una variable nueva a la que le asigno el valor de la cadena revertida y con toString la paso a cadena de texto.
+//		return invertida;//devuelvo la cadena invertida.
+//	}
+	/**
+	 * Método que recibe como párametro una cadena y devuelve la cadena invertida
+	 * @param cadena es la cadena que se le pasa como parámetro
+	 * @return devuelve la cadena invertida
+	 */
 	public static String cadenaInvertida(String cadena) {
-		StringBuilder stringBuilder = new StringBuilder(cadena);//declaro un StringBuilder que es una clase que me permite almacenar cadenas de caracteres mediante la creacion de un objeto y me permite mutar los caracteres de la cadena de texto
-		String invertida = stringBuilder.reverse().toString();//declaro una variable nueva a la que le asigno el valor de la cadena revertida y con toString la paso a cadena de texto.
-		return invertida;//devuelvo la cadena invertida.
+		String cadenaAux="";
+		for (int i = cadena.length()-1; i >=0; i--) {//recorro las posiciones de la palabra empezando por el final
+			cadenaAux+=cadena.charAt(i);//añado a la cadena el valor de cada caracter
+		}
+		return cadenaAux;//devuelvo la cadena invertida.
 	}
 
 }
